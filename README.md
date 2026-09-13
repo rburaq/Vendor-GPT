@@ -1,6 +1,6 @@
 # Vendor-GPT Site Chatbot — RAG + Groq (Node.js / TypeScript)
 
-**🔗 Live App:** https://ai.studio/apps/919eb457-2472-48f0-9a19-72661a8162a5?fullscreenApplet=true
+**🔗 Live App:** vendorgpt.netlify.app
 
 A scope-locked RAG chatbot for the Vendor-GPT marketing site. It answers questions about Vendor-GPT (the product) using **only** Vendor-GPT's own knowledge base, and refuses anything outside that scope instead of guessing. Built to match the site's existing stack (Vite + React 19 + Tailwind v4) and drops straight into the Figma Make export.
 
