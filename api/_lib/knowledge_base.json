@@ -1,0 +1,116 @@
+[
+  {
+    "id": "overview-001",
+    "category": "overview",
+    "title": "What Vendor-GPT is",
+    "content": "Vendor-GPT is a RAG-powered WhatsApp automation platform. It reads a business's catalog, policies and past chats, then replies to customers in seconds with answers that sound like the business itself. It is described as the RAG intelligence layer for WhatsApp business communication, built to reply faster, spend less, and scale without limits."
+  },
+  {
+    "id": "overview-002",
+    "category": "overview",
+    "title": "Who Vendor-GPT is for",
+    "content": "Vendor-GPT is built to work for anyone from a solo market-stall vendor with one WhatsApp number up to a multi-location enterprise, on the same underlying platform. It is positioned as one knowledge base / one brain that scales from a single vendor to an enterprise."
+  },
+  {
+    "id": "problem-001",
+    "category": "problem-and-solution",
+    "title": "Problem: rising WhatsApp API costs",
+    "content": "Businesses face WhatsApp API bills that scale faster than revenue, since every conversation-based charge and agent seat adds up, and enterprise messaging suites price out the businesses that need them most. Vendor-GPT's solution is to deflect the routine: it resolves about 90% of repetitive questions before they ever reach a paid conversation window, so the business pays for outcomes rather than chatter."
+  },
+  {
+    "id": "problem-002",
+    "category": "problem-and-solution",
+    "title": "Problem: hours lost answering repetitive questions",
+    "content": "Businesses lose hours to the same questions asked over and over, like 'Are you open?', 'How much?' and 'Do you deliver?', typed out hundreds of times while real orders wait in the queue. Vendor-GPT's solution is instant, grounded replies: its retrieval (RAG) system finds the exact answer from the business's catalog, pricing and policies and responds in seconds -- accurate, on-brand, and available 24/7."
+  },
+  {
+    "id": "problem-003",
+    "category": "problem-and-solution",
+    "title": "Problem: support headcount limits growth",
+    "content": "Without automation, a business can't grow support without growing payroll -- more customers means more messages means more hires, and headcount becomes the ceiling on how many clients a business can serve. Vendor-GPT's solution is to scale on one brain: the same knowledge base can handle ten clients or ten thousand, so a business can add customers without adding a proportional support team."
+  },
+  {
+    "id": "feature-001",
+    "category": "features",
+    "title": "RAG-grounded auto-replies",
+    "content": "Vendor-GPT's answers are retrieved from a business's own catalog, price list, FAQs and past chats rather than being hallucinated. Every reply is grounded in what the business actually knows / has documented."
+  },
+  {
+    "id": "feature-002",
+    "category": "features",
+    "title": "Lower cost than a traditional WhatsApp API stack",
+    "content": "By resolving routine chats up front, Vendor-GPT cuts conversation-based charges and seat costs dramatically compared to running a traditional WhatsApp Business API stack with human agents for every message."
+  },
+  {
+    "id": "feature-003",
+    "category": "features",
+    "title": "Scales from a single vendor to an enterprise",
+    "content": "A business can start on a phone at a market stall and graduate to multi-agent, multi-location routing on the same Vendor-GPT platform, without switching systems."
+  },
+  {
+    "id": "feature-004",
+    "category": "features",
+    "title": "Per-client personalization",
+    "content": "Vendor-GPT remembers each customer's order history, preferences and tone, so every customer feels individually known, no matter how large the business scales."
+  },
+  {
+    "id": "feature-005",
+    "category": "features",
+    "title": "Built for local vendors",
+    "content": "Vendor-GPT speaks a business's customers' language and currency, works on a single WhatsApp number, and is designed to set up in minutes."
+  },
+  {
+    "id": "feature-006",
+    "category": "features",
+    "title": "Human handoff",
+    "content": "Vendor-GPT knows when a conversation should be escalated to a person, and routes edge cases to a human agent with the full conversation context attached, so nothing has to be re-explained."
+  },
+  {
+    "id": "usecase-001",
+    "category": "use-cases",
+    "title": "Case study: Adunni Stores (local vendor)",
+    "content": "Adunni Stores is a neighbourhood grocery using a single WhatsApp line with Vendor-GPT to answer delivery, price and availability questions instantly, even late at night. Using Vendor-GPT saves the business about 6 hours a day on repetitive replies."
+  },
+  {
+    "id": "usecase-002",
+    "category": "use-cases",
+    "title": "Case study: Northlane Digital (small agency)",
+    "content": "Northlane Digital is a 5-person small agency where Vendor-GPT handles client onboarding, status updates and FAQs, freeing the team for creative work. This lets the agency serve 3.4x more clients per account manager. Its founder, Tunde Bakare, said the agency was about to hire two more support staff but Vendor-GPT handled the flood instead, and customers report replies feel faster and more personal than before."
+  },
+  {
+    "id": "usecase-003",
+    "category": "use-cases",
+    "title": "Case study: Meridian Health Group (mid-market, 40 clinics)",
+    "content": "Meridian Health Group is a mid-market healthcare organization with 40 clinics. Vendor-GPT handles appointment queries and policy questions across every location, routed and personalized, with human handoff for anything clinical. This delivers a 61% lower messaging cost per patient."
+  },
+  {
+    "id": "pricing-001",
+    "category": "pricing",
+    "title": "Starter plan",
+    "content": "The Starter plan costs $0 per month and is for solo vendors testing the waters. It includes 1 WhatsApp number, up to 500 auto-replies per month, a catalog & FAQ knowledge base, and community support. Its call-to-action is 'Start free'."
+  },
+  {
+    "id": "pricing-002",
+    "category": "pricing",
+    "title": "Growth plan (most popular)",
+    "content": "The Growth plan costs $49 per month and is for growing businesses and small teams. It includes up to 3 WhatsApp numbers and 5 seats, unlimited auto-replies, per-client personalization, human handoff and routing, and priority support. It is marked as the most popular plan, with a 14-day free trial as its call-to-action."
+  },
+  {
+    "id": "pricing-003",
+    "category": "pricing",
+    "title": "Enterprise plan",
+    "content": "The Enterprise plan has custom pricing and is for multi-location or high-volume businesses. It includes unlimited numbers and seats, SSO, roles and audit logs, dedicated knowledge tuning, and an SLA with a solutions engineer. Its call-to-action is 'Talk to sales'."
+  },
+  {
+    "id": "pricing-004",
+    "category": "pricing",
+    "title": "Return on investment",
+    "content": "Vendor-GPT is positioned to cost less than one part-time hire while doing the work of several. The average Growth-plan customer recovers Vendor-GPT's cost within the first week, from reclaimed staff hours and reduced WhatsApp API spend alone."
+  },
+  {
+    "id": "getting-started-001",
+    "category": "getting-started",
+    "title": "How to get started",
+    "content": "To get started with Vendor-GPT, a business connects its WhatsApp number, points Vendor-GPT at its catalog, and goes live. Setup takes minutes, requires no engineering, and can be cancelled anytime. It's free to start, and upgrading only makes sense once the plan is already paying for itself."
+  }
+]

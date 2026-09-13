@@ -1,0 +1,55 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="vg-fav-grad" x1="6" y1="8" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7a2f" />
+      <stop offset="28%" stop-color="#ff3d6e" />
+      <stop offset="60%" stop-color="#e0369f" />
+      <stop offset="85%" stop-color="#7b4dff" />
+      <stop offset="100%" stop-color="#5b8bff" />
+    </linearGradient>
+    <linearGradient id="vg-roof-left" x1="12" y1="14" x2="32" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff7a2f" />
+      <stop offset="100%" stop-color="#e0369f" />
+    </linearGradient>
+    <linearGradient id="vg-roof-right" x1="52" y1="14" x2="32" y2="34" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5b8bff" />
+      <stop offset="100%" stop-color="#7b4dff" />
+    </linearGradient>
+    <radialGradient id="vg-core-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="35%" stop-color="#ff3d6e" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#7b4dff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#7b4dff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="#08060f" />
+  <rect width="64" height="64" rx="16" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />
+
+  {/* Outer shield/hexagon contour */}
+  <polygon points="32,6 54,17 54,43 32,56 10,43 10,17" fill="rgba(255, 255, 255, 0.02)" stroke="url(#vg-fav-grad)" stroke-width="1.2" stroke-dasharray="4 3" opacity="0.45" />
+
+  {/* Wings */}
+  <path d="M13 18 L32 37 L32 46 L13 25 Z" fill="url(#vg-roof-left)" opacity="0.95" />
+  <path d="M51 18 L32 37 L32 46 L51 25 Z" fill="url(#vg-roof-right)" opacity="0.95" />
+
+  {/* Facets */}
+  <path d="M13 18 L32 29 L51 18 L32 10 Z" fill="url(#vg-fav-grad)" opacity="0.3" />
+  <path d="M13 18 L32 29 L51 18" fill="none" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+
+  {/* Keystone */}
+  <path d="M32 29 L22 41 L32 54 L42 41 Z" fill="none" stroke="url(#vg-fav-grad)" stroke-width="2.2" stroke-linejoin="round" />
+
+  {/* Waveform */}
+  <path d="M26 38 Q32 33 38 38" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" opacity="0.9" />
+  <path d="M28 43 Q32 40 36 43" fill="none" stroke="url(#vg-fav-grad)" stroke-width="1.6" stroke-linecap="round" />
+
+  {/* Core */}
+  <circle cx="32" cy="29" r="6" fill="url(#vg-core-glow)" />
+  <circle cx="32" cy="29" r="2.2" fill="#ffffff" />
+
+  {/* Nodes */}
+  <circle cx="13" cy="18" r="2.5" fill="#ff7a2f" />
+  <circle cx="51" cy="18" r="2.5" fill="#5b8bff" />
+  <circle cx="32" cy="54" r="2.8" fill="#e0369f" />
+</svg>

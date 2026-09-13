@@ -1,0 +1,11 @@
+{
+  "title": "Vendor-GPT — AI-powered vendor ecosystem",
+  "description": "AI-powered WhatsApp vendor ecosystem and RAG intelligence platform",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

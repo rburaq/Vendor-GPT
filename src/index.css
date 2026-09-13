@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400;1,500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-mono: 'DM Mono', ui-monospace, monospace;
+  --font-sans: 'DM Mono', ui-monospace, monospace;
+
+  /* Ground */
+  --color-ink: #08060f;
+  --color-ink-2: #0d0a1c;
+  --color-indigo-deep: #150f34;
+  --color-violet-mid: #3a1f6b;
+
+  /* Gradient orb stops */
+  --color-glow-orange: #ff7a2f;
+  --color-glow-red: #ff3d6e;
+  --color-glow-magenta: #e0369f;
+  --color-glow-fuchsia: #c23be0;
+  --color-glow-violet: #7b4dff;
+  --color-glow-blue: #5b8bff;
+
+  /* Text */
+  --color-fg: #f4f1ff;
+  --color-fg-dim: #b8b2d8;
+  --color-fg-faint: #7d78a3;
+
+  /* Surface */
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-hairline: rgba(255, 255, 255, 0.09);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+  }
+
+  @media (pointer: fine) {
+    body, a, button, [role="button"] {
+      cursor: none;
+    }
+    input, textarea, select {
+      cursor: auto;
+    }
+  }
+
+  ::selection {
+    background: var(--color-glow-fuchsia);
+    color: #fff;
+  }
+
+  /* Hide scrollbars until scrolling */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 999px;
+  }
+  *:hover::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+@layer utilities {
+  /* Flow scroll: elements animate progressively as they pass through the
+     viewport. Modern browsers use a scroll/view timeline for continuous,
+     scroll-linked motion; others fall back to the IntersectionObserver toggle. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition:
+      opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* ---- data-flow reveal system (IntersectionObserver-driven) ------------ *
+   * Add data-flow="fade|up|down|left|right|scale|blur" to any element.
+   * Optional: data-flow-delay="120" (ms), data-flow-duration="900" (ms),
+   *           data-flow-repeat (re-animate every time it re-enters view).
+   * The engine adds `.is-inview` when the element scrolls into view.        */
+  [data-flow] {
+    --flow-duration: 800ms;
+    --flow-delay: 0ms;
+    opacity: 0;
+    transition:
+      opacity var(--flow-duration) cubic-bezier(0.16, 1, 0.3, 1)
+        var(--flow-delay),
+      transform var(--flow-duration) cubic-bezier(0.16, 1, 0.3, 1)
+        var(--flow-delay),
+      filter var(--flow-duration) ease var(--flow-delay);
+    will-change: opacity, transform;
+  }
+  [data-flow="up"] {
+    transform: translateY(40px);
+  }
+  [data-flow="down"] {
+    transform: translateY(-40px);
+  }
+  [data-flow="left"] {
+    transform: translateX(48px);
+  }
+  [data-flow="right"] {
+    transform: translateX(-48px);
+  }
+  [data-flow="scale"] {
+    transform: scale(0.9);
+  }
+  [data-flow="blur"] {
+    filter: blur(14px);
+  }
+  [data-flow].is-inview {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  @keyframes flow-in {
+    from {
+      opacity: 0;
+      transform: translateY(48px) scale(0.985);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+      animation: flow-in linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 60%;
+    }
+    /* Staggered depth: alternating sections drift at slightly different rates */
+    .flow-slow {
+      animation-range: entry 5% cover 35%;
+    }
+  }
+
+  /* Scroll progress bar driven by the document scroll timeline */
+  @keyframes progress-grow {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      transform: scaleX(1);
+    }
+  }
+  .scroll-progress {
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+  }
+  @supports (animation-timeline: scroll()) {
+    .scroll-progress {
+      animation: progress-grow linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+
+  .text-gradient {
+    background: linear-gradient(
+      100deg,
+      var(--color-glow-orange),
+      var(--color-glow-red),
+      var(--color-glow-fuchsia),
+      var(--color-glow-violet)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes orb-drift {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-2.5%) scale(1.03);
+    }
+  }
+  .animate-orb {
+    animation: orb-drift 14s ease-in-out infinite;
+  }
+
+  /* Ambient orb parallax is driven by the JS engine (data-parallax). */
+  .orb-parallax {
+    will-change: transform;
+  }
+
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0.9;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

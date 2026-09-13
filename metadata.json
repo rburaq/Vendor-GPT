@@ -1,0 +1,8 @@
+{
+  "name": "Vendor-GPT",
+  "description": "AI-powered WhatsApp vendor ecosystem and RAG intelligence platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
